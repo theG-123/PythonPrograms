@@ -27,6 +27,7 @@ elif fileReadingOptions == '2':
         line  =  line.rstrip()
         count =  count + 1
     print ('This file has a total of', count, 'lines!')
-elif fileReadingOptions == '3':
-#Check how many characters the file has in total
+elif fileReadingOptions == '3': #Check how many characters the file has in total
     length = 0
+    for line in fileOpen:
+        print ('Test: Number 3 works for now')
