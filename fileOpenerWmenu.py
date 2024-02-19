@@ -29,4 +29,4 @@ elif fileReadingOptions == '2':
     print ('This file has a total of', count, 'lines!')
 elif fileReadingOptions == '3':
 #Check how many characters the file has in total
-    length = 0 
+    length = 0
