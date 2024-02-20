@@ -28,6 +28,11 @@ elif fileReadingOptions == '2':
         count =  count + 1
     print ('This file has a total of', count, 'lines!')
 elif fileReadingOptions == '3': #Check how many characters the file has in total
-    length = 0
+    totalCharacters = 0
     for line in fileOpen:
-        print ('Test: Number 3 works for now')
+        totalCharacters = totalCharacters + len (line.rstrip())
+    print ('The file', getFileName, 'has', totalCharacters, 'characters in total!')
+elif fileReadingOptions == '4':
+    print ('number 4 works for now')
+else:
+    print ('Invalid input: Please select a number between 1 and 4')
