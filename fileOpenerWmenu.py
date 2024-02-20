@@ -20,19 +20,25 @@ if fileReadingOptions == '1':
     for line in fileOpen:
         line  =  line.rstrip()
         print (line)
-elif fileReadingOptions == '2':
 #Checking length of file (lines)
+elif fileReadingOptions == '2':
     count = 0
     for line in fileOpen:
         line  =  line.rstrip()
         count =  count + 1
     print ('This file has a total of', count, 'lines!')
-elif fileReadingOptions == '3': #Check how many characters the file has in total
+#Check how many characters the file has in total
+elif fileReadingOptions == '3':
     totalCharacters = 0
     for line in fileOpen:
         totalCharacters = totalCharacters + len (line.rstrip())
     print ('The file', getFileName, 'has', totalCharacters, 'characters in total!')
+#Searching for a specific thing on the file
 elif fileReadingOptions == '4':
-    print ('number 4 works for now')
+    fileSearch = input ('What do you want to search for?')
+    for line in fileOpen:
+        line = line.rstrip()
+        if fileSearch in line:
+            print(line)
 else:
     print ('Invalid input: Please select a number between 1 and 4')
