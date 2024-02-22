@@ -5,7 +5,7 @@
 getFileName = input ('Select file: ')
 
 #Check if the file is valid and send a message to the user (succesfull/unsuccesful) opening
-try:
+try: 
     fileOpen = open (getFileName)
     print ('File succesfully opened. What do you wish to do with the file? ')
 except:
