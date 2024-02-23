@@ -12,7 +12,19 @@ except:
     print ('Error: Could not open file')
     exit ()
 
+words_list = []
+
 for line in openFile:
-    line = line.rstrip()
-    splittedFile = line.split()
-    print (splittedFile.sort())
+    # Split the line into words
+    words = line.split()    
+    # Iterate through each word in the line
+    for word in words:
+    # If the word is not already in the list, append it
+        if word not in words_list:
+            words_list.append(word)
+
+# Sort the list of words
+words_list.sort()
+
+# Print the sorted list
+print(words_list)
