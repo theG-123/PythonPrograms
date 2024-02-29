@@ -16,7 +16,7 @@ except:
 
 for line in openFile:
     line = line.rstrip()
-    if line.startswith('From'):
+    if line.startswith('From '):
         count = count + 1
         splittedLine = line.split()
         print(splittedLine[1])
