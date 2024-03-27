@@ -4,23 +4,23 @@
 #You should use input to read a string and float() to convert the string to a number. Do not worry about error checking the user input unless you want to
 # You can assume the user types numbers properly. Do not name your variable sum or use the sum() function
 
-hours = input ('Enter hours worked: ')
-rate = input ('Enter payment rate: ')
+#Rewrite your pay computation with time-and-a-half for overtime and
+#create a function called computepay which takes two parameters (hours and rate)
 
 try:
-    fHours = float (hours)
-    fRate = float (rate)
+    hrs = float (input ('Hours worked: '))
+    rt = float (input ('Rate per hour: '))
 except:
     print ('Error, please enter a numeric input')
     quit ()
 
-def computepay ():
-    if fHours <= 40:
-        pay = fHours * fRate
-        return pay
+def computepay (hours, rate):
+    if hours <= 40:
+        pay = hours * rate
     else:
-        normalHours = 40
-        overHours = fHours - 40
-        pay = normalHours * fRate + overHours * fRate * 1.5
-        return pay
-print ("Pay",computepay ())
+        normHrs = 40
+        overHrs = hours - normHrs
+        pay = (normHrs * rate) + (rate * 1.5 * overHrs)
+    return pay
+
+print ('Pay:', computepay (hrs, rt))

@@ -1,3 +1,5 @@
+#This is the advanced way of finding the maximun and minimum numbers.
+
 numList = []
 
 while True:
