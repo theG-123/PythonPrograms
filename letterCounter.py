@@ -40,7 +40,17 @@ for line in openFile:
     words = line.split() #Splitting each line in the file into words
     for word in words: #loop through all the words and letters in each line 
         for letter in word:
+            if letter.isdigit(): #Eliminate any numbers on the file
+                continue
             #add the letter to the list if it has not been added yet; if it has, updates its count plus one
             letterFrequency [letter] = letterFrequency.get(letter,0) + 1 
 
-print (sorted(letterFrequency.items()))
+#Ordering the letters in decreasing order of frequency
+numLetterFrequency = list()
+for k,v in letterFrequency.items():
+    numLetterFrequency.append((v, k)) #Switch the key and values so it can be ordered by numbers and not by letters
+
+numLetterFrequency.sort(reverse = True) #Make the count go from higher to lower numbers
+
+for v, k in numLetterFrequency: #Switching the values and keys again so the letter appears first and then their frequency
+    print (f'{k} - {v}')
