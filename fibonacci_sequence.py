@@ -2,10 +2,10 @@
 
 while True:
     howManyNums = input('How many numbers from the fibbonaci sequence do you want to print out? ') 
-    try:
+    try: #check if the user entered a number
         numbers = int (howManyNums)
         break
-    except:
+    except: #If they didn't enter a number, they recieve an error message and get asked again so a traceback does not happen 
         print('Please enter a number')
         continue
 
