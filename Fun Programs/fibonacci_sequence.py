@@ -1,4 +1,4 @@
-#Calculate the first 20 digits of the fibonacci sequence
+#Calculate a certain number of digits of the fibonacci sequence
 
 while True:
     howManyNums = input('How many numbers from the fibbonaci sequence do you want to print out? ') 
